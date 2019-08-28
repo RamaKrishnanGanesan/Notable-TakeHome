@@ -1,0 +1,5 @@
+<b>PHYSICIANS</b>
+<mat-list>
+    <mat-list-item *ngFor="let p of physicians" (click)="populateSchedule(p)"> 
+        {{p.firstName}} </mat-list-item>
+</mat-list>

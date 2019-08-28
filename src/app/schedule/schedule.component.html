@@ -1,0 +1,34 @@
+
+<div *ngIf="event" >
+        <div><b>{{event.firstName}} {{event.lastName}}</b></div>
+        <div><b>{{event.email}}</b></div>
+
+        <table mat-table [dataSource]="event.schedule" class="mat-elevation-z8">
+         
+                <ng-container matColumnDef="pos">
+                        <th mat-header-cell *matHeaderCellDef> # </th>
+                        <td mat-cell *matCellDef="let element"> {{element.pos}} </td>
+                      </ng-container>
+                <!-- Name Column -->
+                <ng-container matColumnDef="patientName">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.patientName}} </td>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="time">
+                  <th mat-header-cell *matHeaderCellDef> Time </th>
+                  <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+                </ng-container>
+              
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="kind">
+                  <th mat-header-cell *matHeaderCellDef> Kind </th>
+                  <td mat-cell *matCellDef="let element"> {{element.kind}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+</div>

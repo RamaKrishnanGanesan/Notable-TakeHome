@@ -1,0 +1,4 @@
+<div class="home-container">
+    <app-physicians [physicians]="data.physicians" (eventClicked)="childEventClicked($event)"></app-physicians>
+    <app-schedule [event]="clickedEvent"></app-schedule>
+</div>
