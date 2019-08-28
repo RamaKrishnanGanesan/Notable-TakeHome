@@ -6,7 +6,6 @@ import {NotableService} from '../notable.service';
   styleUrls: ['./schedule.component.scss']
 })
 export class ScheduleComponent implements OnInit {
-  event: Event;
   displayedColumns: string[] = ['pos', 'patientName', 'time', 'kind'];
   constructor(public ns: NotableService) { }
   ngOnInit() {
